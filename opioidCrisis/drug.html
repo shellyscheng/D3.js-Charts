@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <style>
+      svg { 
+        background: #f9f9f9;
+        display: block;
+        margin: 0 auto;
+      }
+
+      h1 { margin-bottom: 2rem; }
+
+      body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        -webkit-print-color-adjust: exact;
+      }
+
+      h3 { margin-top: 3rem; }
+
+      .container {
+        max-width: 46rem;
+      }
+
+      .d3-tip {
+        line-height: 1;
+        font-weight: bold;
+        padding: 12px;
+        background: rgba(100, 0, 100, 0.8);
+        color: #fff;
+        border-radius: 2px;
+        pointer-events: none;
+      }
+
+      /* 
+        go find a span inside of a thing
+        with the class of d3-tip 
+      */
+      .d3-tip span {
+        color: coral;
+      }
+
+      /* Creates a small triangle extender for the tooltip */
+      .d3-tip:after {
+        box-sizing: border-box;
+        display: inline;
+        font-size: 10px;
+        width: 100%;
+        line-height: 1;
+        color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        pointer-events: none;
+      }
+
+      /* Northward tooltips */
+      .d3-tip.n:after {
+        content: "\25BC";
+        margin: -1px 0 0 0;
+        top: 100%;
+        left: 0;
+        text-align: center;
+      }
+
+      /* Eastward tooltips */
+      .d3-tip.e:after {
+        content: "\25C0";
+        margin: -4px 0 0 0;
+        top: 50%;
+        left: -8px;
+      }
+
+      /* Southward tooltips */
+      .d3-tip.s:after {
+        content: "\25B2";
+        margin: 0 0 1px 0;
+        top: -8px;
+        left: 0;
+        text-align: center;
+      }
+
+      /* Westward tooltips */
+      .d3-tip.w:after {
+        content: "\25B6";
+        margin: -4px 0 0 -1px;
+        top: 50%;
+        left: 100%;
+      }
+
+      #chart2 svg g {
+        fill: red;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <h1>The Opioid Crisis</h1>
+
+    <p> From the Washington Post: The president will stop short of designating the drug epidemic a national state of emergency, which would have given states access to funding from a federal disaster relief fund, just as they would be following a hurricane or other natural disaster. </p>
+
+    <p>Every day, more than 90 Americans die after overdosing on opioids.1 The misuse of and addiction to opioids—including prescription pain relievers, heroin, and synthetic opioids such as fentanyl—is a serious national crisis that affects public health as well as social and economic welfare. The Centers for Disease Control and Prevention estimates that the total "economic burden" of prescription opioid misuse alone in the United States is $78.5 billion a year, including the costs of healthcare, lost productivity, addiction treatment, and criminal justice involvement.</p>
+
+
+    <h3>Chart 1: Drug overdose deaths in U.S., 2010–2014</h3>
+    <p>data from National Institute on Drug Overdoes</p>
+    <div id="chart-2"></div>
+
+    <!-- This is D3, our graphing library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+    <script src="d3-tip.js"></script>
+
+    <!-- Now we include our actual visualization -->
+    <script src="06-chart-2.js"></script>
+    
+</html>
+
+
+
