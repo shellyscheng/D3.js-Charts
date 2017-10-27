@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <style>
+      svg { 
+        background: #f9f9f9;
+        display: block;
+        margin: 0 auto;
+      }
+
+      h1 { margin-bottom: 2rem; }
+
+      body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        -webkit-print-color-adjust: exact;
+      }
+
+      h3 { margin-top: 3rem; }
+
+      .container {
+        max-width: 46rem;
+      }
+
+      #chart2 svg g {
+        fill: red;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <h1>Homework 6: Axes, Lines and Areas</h1>
+
+    <p>Completed version should look like <a href="06-homework-completed.pdf">this one</a>. Hints are, as always, in <code>hints/</code>.</p>
+
+    <h3>Chart 1: A single line</h3>
+    <p>Draw a single line showing AAPL's stock price over a range in 2015-2016, with small dots marking each point. Use <code>AAPL.csv</code> (it's from Yahoo stock prices).</p>
+    <div id="chart-1"></div>
+
+    <h3>Chart 2: Multiple lines</h3>
+    <p>Use <code>alcohol-consumption.csv</code> to graph alcohol consumption over years. I want each line to be a different color, with appropriately-colored dots marking each data point.</h3>
+    <div id="chart-2"></div>
+
+    <h3>Chart 3: Area graph</h3>
+    <p>An area graph with multiple overlapping segments, use <code>air-emissions.csv</code> to graph pollutants over years. Since they're overlapping, I'd like to be able to see through them a little (even if you can't tell). No dots.</p>
+    <div id="chart-3"></div>
+
+    <h3>Chart 4: Multiple lines + one highlighted line</h3>
+    <p>Draw multiple lines, with a single dot at the end of the line and some text saying which country it is.</p>
+    <p>Highlight one of the countries in a different color. Highlight its name, too.</p>
+    <p>Use <code>air-emissions.csv</code>.</p>
+    <div id="chart-4"></div>
+
+    <h3>Chart 5: Back to a lot of circles</h3>
+    <p>Use <code>animal-sizes.csv</code> to make 9 circles explaining how large the different animals are.</p>
+
+    <div id="chart-5"></div>
+
+    <!-- This is D3, our graphing library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+
+    <!-- Now we include our actual visualization -->
+    <script src="06-chart-1.js"></script>
+    <script src="06-chart-2.js"></script>
+    <script src="06-chart-3.js"></script>
+    <script src="06-chart-4.js"></script>
+    <script src="06-chart-5.js"></script>
+  </div>
+</html>
+
+
+
