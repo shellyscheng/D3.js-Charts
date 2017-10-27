@@ -33,14 +33,14 @@
       return yPositionScale(d.deaths)
     })
 
-  // var tip = d3.tip()
-  //   .attr('class', 'd3-tip')
-  //   .offset([-10, 0])
-  //   .html(function(d) {
-  //     return "<strong>Death:</strong> <span>" + d.deaths + "</span>";
-  //   })
+  var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+      return "<strong>Death:</strong> <span>" + d.deaths + "</span>";
+    })
 
-  // svg.call(tip)
+  svg.call(tip)
 
 
   d3.queue()
@@ -63,21 +63,21 @@
       .attr("fill", function(d) {
       	return colorScale(d.drug)
       })
-      // .on("click", function(d) {
-      //   // d3, go get the
-      //   // element and make
-      //   // the radius 30
+      .on("click", function(d) {
+        // d3, go get the
+        // element and make
+        // the radius 30
 
-      //   var element = d3.select(this)
+        var element = d3.select(this)
 
-      //   if(element.attr("r") === '20') {
-      //     element.transition().attr("r", 3)
-      //   } else {
-      //     element.transition().attr("r", 20)
-      //   }
-      // })
-      // .on("mouseover", tip.show)
-      // .on("mouseout", tip.hide)
+        if(element.attr("r") === '20') {
+          element.transition().attr("r", 3)
+        } else {
+          element.transition().attr("r", 20)
+        }
+      })
+      .on("mouseover", tip.show)
+      .on("mouseout", tip.hide)
 
 
     var nested = d3.nest()
