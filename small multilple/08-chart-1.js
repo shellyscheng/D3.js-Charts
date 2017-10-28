@@ -42,7 +42,7 @@
 
     xPositionScale.domain([dateMin, dateMax])
 
-    console.log(datapoints)
+    //console.log(datapoints)
 
     // svg.selectAll("circle")
     //   .data(datapoints)
@@ -56,7 +56,7 @@
       .key(function(d) {return d.region})
       .entries(datapoints)
 
-    console.log(nested)
+    //console.log(nested)
 
     svg.append("rect")
       .data(nested)
