@@ -49,10 +49,10 @@
 
 
     var nested = d3.nest()
-    .key(function(d) {
+      .key(function(d) {
       return d.LOCATION
     })
-    .entries(datapoints)
+      .entries(datapoints)
 
     svg.selectAll("path")
       .data(nested)
