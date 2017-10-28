@@ -57,7 +57,7 @@
         svg.append("path")
           .datum(datayear)
           .attr("d", area1)
-          .attr("fill", "lightblue")
+          .attr("fill", "#377eb8")
           .attr("opacity", 0.5)
 
         svg.append("path")
@@ -83,7 +83,7 @@
           .attr("y", height / 2)
           .attr("dx", 20)
           .attr("text-anchor", "middle")
-          .attr("fill", "lightblue")
+          .attr("fill", "#377eb8")
 
         svg.append("text")
           .datum(datayear)
