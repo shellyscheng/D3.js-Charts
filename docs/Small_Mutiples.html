@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <style>
+      svg { 
+        display: block;
+        margin: 0 auto;
+      }
+
+      #chart-2 svg,
+      #chart-3 svg {
+        display: inline-block;
+        margin: 5px;
+      }
+
+      h1 { margin-bottom: 2rem; }
+
+      body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        -webkit-print-color-adjust: exact;
+      }
+
+      h3 { margin-top: 3rem; }
+
+      .container {
+        max-width: 46rem;
+      }
+
+      #chart2 svg g {
+        fill: red;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <h1>Homework 8: Small multiples and adding random bits and pieces</h1>
+
+    <p>Completed version should look like <a href="08-homework-completed.pdf">this one</a>. Hints are, as always, in <code>hints/</code>.</p>
+
+    <p><strong>!! HOT TIP !!:</strong> The <strong>last one</strong> might be easier than the first and second one.</p>
+
+    <h3>Chart 1: Multiple lines with annotations</h3>
+    <p>Create a line graph of housing prices in different sections of the United States, illustrating how prices fall in winter. Data is from <code>housing-prices.csv</code></p>
+    <ol>
+      <li>Draw your axes</li>
+      <li>Draw your lines</li>
+      <li>Draw the circles at the end</li>
+      <li>Draw the text at the end</li>
+      <li>Color in lines, circles and text</li>
+      <li>Add the colored zone for winter - Dec through Feb</li>
+      <li>Add a title</li>
+    </ol>
+    <p>This graph is bad, but we're making it anyway!</p>
+    <div id="chart-1"></div>
+
+    <h3>Chart 2: Small multiples</h3>
+    <p>We'll recreate <a href="https://www.reddit.com/r/dataisbeautiful/comments/3gplje/usa_vs_japan_agespecific_fertility_rates_19472010/">this</a> and <a href="http://www.randalolson.com/2015/08/23/small-multiples-vs-animated-gifs-for-showing-changes-in-fertility-rates-over-time/">this</a> using D3 and small multiples. I want each year as its own graph, with Japan and USA area graphs on top of each other and the year as a note at the top. Data is from <code>fertility.csv</code></h3>
+    <div id="chart-2"></div>
+
+    <h3>Chart 3: Small multiples (even more!)</h3>
+    <p>Reproducing a graphic from <a href="https://www.nytimes.com/2014/04/23/upshot/the-american-middle-class-is-no-longer-the-worlds-richest.html?rref=upshot">this Upshot article</a>.</p>. Data is from <code>middle-class-income.csv</code> and <code>middle-class-income-usa.csv</code></p>
+    <div id="chart-3"></div>
+
+    <!-- This is D3, our graphing library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+
+    <!-- Now we include our actual visualization -->
+    <script src="08-chart-1.js"></script>
+    <script src="08-chart-2.js"></script>
+    <script src="08-chart-3.js"></script>
+</div>
+</html>
+
+
+
