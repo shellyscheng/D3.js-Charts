@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <style>
+      svg { 
+        background: #f9f9f9;
+        display: block;
+        margin: 0 auto;
+      }
+
+      h1 { margin-bottom: 2rem; }
+
+      body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        -webkit-print-color-adjust: exact;
+      }
+
+      h3 { margin-top: 3rem; }
+
+      .container {
+        max-width: 1080px;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <h1>Homework 10: Radials and more small multiples</h1>
+
+    <p>Completed version should look like <a href="10-homework-completed.pdf">this one</a>. Hints are, as always, in <code>hints/</code>.</p>
+
+    <p>Depending on how you think about this stuff, pies are either the easiest or the hardest. It's probably good to start on, though.</p>
+
+    <h2>1. A simple, centered pie chart</h2>
+    <p>Dataset is <code>data/time-breakdown.csv</code></p>
+    <div id="chart-1"></div>
+
+    <h3>2. Pie chart, small multiples</h3>
+    <p>Same as above, but small multiples'd. You don't need to label the wedges.</p>
+    <p>Dataset is <code>data/time-breakdown-all.csv</code></p>
+    <div id="chart-2"></div>
+
+    <h3>3. Fixed-wedge size pie, or radial bar graph</h3>
+    <p>You can actually the pie generator for this! You don't have to, though.</p>
+    <p>Dataset is <code>data/ny-temps.csv</code></p>
+    <div id="chart-3"></div>
+
+    <h3>3b. Small multiples of Chart 3</h3>
+    <p>Now you'll just have to re-use your code to distribute it across the x axis. Dataset is <code>data/all-temps.csv</code></p>
+    <div id="chart-3b"></div>
+
+    <h3>3c. Chart 3, also showing the minimum temperature for each month</h3>
+    <p>Isn't this getting fun? Dataset is <code>data/all-temps.csv</code></p>
+    <div id="chart-3c"></div>
+
+    <h3>4. Radial area charts</h3>
+    <p>Dataset is <code>data/ny-temps.csv</code></p>
+    <div id="chart-4"></div>
+
+    <h3>5. Radial area charts, small multiples </h3>
+    <p>More small multiples! Dataset is <code>data/all-temps.csv</code></p>
+
+    <div id="chart-5"></div>
+
+    <h3>6. Radial filled line + scatter </h3>
+    <p>I'm only giving you this one because I figured out a neat way to make them that's kind of fun. Dataset is <code>data/time-binned.csv</code></p>
+
+    <div id="chart-6"></div>
+
+    <!-- This is D3, our graphing library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.2/d3.min.js"></script>
+
+    <!-- Now we include our own javascript -->
+    <script src="chart-1.js"></script>
+    <script src="chart-2.js"></script>
+    <script src="chart-3.js"></script>
+    <script src="chart-3b.js"></script>
+    <script src="chart-3c.js"></script>
+    <script src="chart-4.js"></script>
+    <script src="chart-5.js"></script>
+    <script src="chart-6.js"></script>
+</div>
+</html>
