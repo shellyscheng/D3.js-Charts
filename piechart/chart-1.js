@@ -41,7 +41,6 @@
       .enter().append("path")
       .attr("d", function(d) {return arc(d)})
       .attr("fill", function(d) {
-        console.log(d)
         return colorScale(d.data.task)
       })
 

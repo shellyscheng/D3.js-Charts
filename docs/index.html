@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
     <style>
       svg { 
-        display: block;
+        display: inline-block;
         margin: 0 auto;
       }
 
@@ -36,26 +36,35 @@
   </head>
   <body>
   <div class="container">
-    <h1>Small multiples and adding random bits and pieces</h1>
+    <h1>Small multiples and Pie Chart</h1>
 
-    <h3>Chart 1: Multiple lines with annotations</h3>
+    <h2>Chart 1: A simple, centered pie chart</h2>
+    <p>Dataset is <code>time-breakdown.csv</code></p>
     <div id="chart-1"></div>
 
-    <h3>Chart 2: Small multiples</h3>
-    <p>Recreate <a href="https://www.reddit.com/r/dataisbeautiful/comments/3gplje/usa_vs_japan_agespecific_fertility_rates_19472010/">this</a> and <a href="http://www.randalolson.com/2015/08/23/small-multiples-vs-animated-gifs-for-showing-changes-in-fertility-rates-over-time/">this</a> using D3 and small multiples. Data is from <code>fertility.csv</code></h3>
+    <h3>Chart 2: Pie chart, small multiples</h3>
+    <p>Dataset is <code>data/time-breakdown-all.csv</code></p>
     <div id="chart-2"></div>
 
-    <h3>Chart 3: Small multiples (even more!)</h3>
-    <p>Reproducing a graphic from <a href="https://www.nytimes.com/2014/04/23/upshot/the-american-middle-class-is-no-longer-the-worlds-richest.html?rref=upshot">this Upshot article</a>.</p>. Data is from <code>middle-class-income.csv</code> and <code>middle-class-income-usa.csv</code></p>
+    <h3>Chart 3: Small multiples</h3>
+    <p>Recreate <a href="https://www.reddit.com/r/dataisbeautiful/comments/3gplje/usa_vs_japan_agespecific_fertility_rates_19472010/">this</a> and <a href="http://www.randalolson.com/2015/08/23/small-multiples-vs-animated-gifs-for-showing-changes-in-fertility-rates-over-time/">this</a> using D3 and small multiples. Data is from <code>fertility.csv</code></h3>
     <div id="chart-3"></div>
+
+    <h3>Chart 4: Small multiples (even more!)</h3>
+    <p>Reproducing a graphic from <a href="https://www.nytimes.com/2014/04/23/upshot/the-american-middle-class-is-no-longer-the-worlds-richest.html?rref=upshot">this Upshot article</a>.</p>. Data is from <code>middle-class-income.csv</code> and <code>middle-class-income-usa.csv</code></p>
+    <div id="chart-4"></div>
+
 
     <!-- This is D3, our graphing library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.2/d3.min.js"></script>
+
 
     <!-- Now we include our actual visualization -->
-    <script src="08-chart-1.js"></script>
-    <script src="08-chart-2.js"></script>
-    <script src="08-chart-3.js"></script>
+    <script src="piechart.js"></script>
+    <script src="piechartmultiple.js"></script>
+    <script src="fertility.js"></script>
+    <script src="medianwage.js"></script>
 </div>
 </html>
 
