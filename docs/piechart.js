@@ -1,7 +1,7 @@
 (function() {
     var margin = { top: 30, left: 30, right: 30, bottom: 30},
-    height = 400 - margin.top - margin.bottom,
-    width = 780 - margin.left - margin.right;
+    height = 300 - margin.top - margin.bottom,
+    width = 500 - margin.left - margin.right;
 
   // What is this???
   var svg = d3.select("#chart-1")
@@ -16,11 +16,11 @@
 
   var arc = d3.arc()
     .innerRadius(0)
-    .outerRadius(150)
+    .outerRadius(100)
 
   var labelArc = d3.arc()
-    .innerRadius(150)
-    .outerRadius(180)
+    .innerRadius(80)
+    .outerRadius(150)
 
   var colorScale = d3.scaleOrdinal()
     .range(['#fec44f', '#74c476', '#9e9ac8'])
