@@ -29,28 +29,104 @@
         max-width: 46rem;
       }
 
+      img.block {
+        display: block;
+        border: solid #333 1p;
+        margin: 0 auto;
+      }
+
       #chart2 svg g {
         fill: red;
       }
+
+      .d3-tip {
+        line-height: 1;
+        font-weight: bold;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        border-radius: 2px;
+        pointer-events: none;
+      }
+
+      /* Creates a small triangle extender for the tooltip */
+      .d3-tip:after {
+        box-sizing: border-box;
+        display: inline;
+        font-size: 10px;
+        width: 100%;
+        line-height: 1;
+        color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        pointer-events: none;
+      }
+
+      /* Northward tooltips */
+      .d3-tip.n:after {
+        content: "\25BC";
+        margin: -1px 0 0 0;
+        top: 100%;
+        left: 0;
+        text-align: center;
+      }
+
+      /* Eastward tooltips */
+      .d3-tip.e:after {
+        content: "\25C0";
+        margin: -4px 0 0 0;
+        top: 50%;
+        left: -8px;
+      }
+
+      /* Southward tooltips */
+      .d3-tip.s:after {
+        content: "\25B2";
+        margin: 0 0 1px 0;
+        top: -8px;
+        left: 0;
+        text-align: center;
+      }
+
+      /* Westward tooltips */
+      .d3-tip.w:after {
+        content: "\25B6";
+        margin: -4px 0 0 -1px;
+        top: 50%;
+        left: 100%;
+      }
+
+     
     </style>
   </head>
   <body>
   <div class="container">
-    <h1>Small multiples and Pie Chart</h1>
 
-    <h2>Chart 1: A simple, centered pie chart</h2>
+    <h1>D3.js Charts and Interactive Graphics</h1>
+
+    <h2>Chart 1: Interactive point/bubble maps</h3>
+
+    <p>Putting circles on a map.</p>
+    <p><button id="make-a-chart">Make a chart</button></p>
+    <p><button id="make-a-map">Make a map</button></p>
+
+    <div id="chart-5"></div>
+
+    <p> </p>
+    <p> </p>
+
+    <h2>Chart 2: A simple, centered pie chart</h2>
     <p>Dataset is <code>time-breakdown.csv</code></p>
     <div id="chart-1"></div>
 
-    <h3>Chart 2: Pie chart, small multiples</h3>
+    <h3>Chart 3: Pie chart, small multiples</h3>
     <p>Dataset is <code>data/time-breakdown-all.csv</code></p>
     <div id="chart-2"></div>
 
-    <h3>Chart 3: Small multiples</h3>
+    <h3>Chart 4: Small multiples</h3>
     <p>Recreate <a href="https://www.reddit.com/r/dataisbeautiful/comments/3gplje/usa_vs_japan_agespecific_fertility_rates_19472010/">this</a> and <a href="http://www.randalolson.com/2015/08/23/small-multiples-vs-animated-gifs-for-showing-changes-in-fertility-rates-over-time/">this</a> using D3 and small multiples. Data is from <code>fertility.csv</code></h3>
     <div id="chart-3"></div>
 
-    <h3>Chart 4: Small multiples (even more!)</h3>
+    <h3>Chart 5: Small multiples (even more!)</h3>
     <p>Reproducing a graphic from <a href="https://www.nytimes.com/2014/04/23/upshot/the-american-middle-class-is-no-longer-the-worlds-richest.html?rref=upshot">this Upshot article</a>.</p>. Data is from <code>middle-class-income.csv</code> and <code>middle-class-income-usa.csv</code></p>
     <div id="chart-4"></div>
 
@@ -58,6 +134,8 @@
     <!-- This is D3, our graphing library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.2/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+
 
 
     <!-- Now we include our actual visualization -->
@@ -65,6 +143,7 @@
     <script src="piechartmultiple.js"></script>
     <script src="fertility.js"></script>
     <script src="medianwage.js"></script>
+    <script src="bubleiInteractive.js"></script>
 </div>
 </html>
 
