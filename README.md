@@ -5,10 +5,10 @@ Hi, I am currently learning d3. Here are some graphics that I made through d3.js
 I will keep updated here on a regularl basis.
 
 
-## Line & Area Charts
+### [Line & Area Charts](../lines&areas)
 
-## Pie and Radial Charts
+### [Pie and Radial Charts](../piechart)
 
-## Samll Multiple Charts
+### [Samll Multiple Charts](../small\ multilple)
 
-## Interactives
+### Interactives
