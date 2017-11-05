@@ -39,7 +39,8 @@
     container.selectAll("path")
       .data(pie(datapoints))
       .enter().append("path")
-      .attr("d", function(d) {return arc(d)})
+      .attr("d", function(d) {
+        return arc(d)})
       .attr("fill", function(d) {
         return colorScale(d.data.task)
       })

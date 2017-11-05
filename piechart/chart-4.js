@@ -75,6 +75,7 @@
       .attr("cy", 0)
       .attr("fill", "none")
       .attr("stroke", "black")
+      .attr("stroke-width", 1)
       .attr("r", function(d) {return radiusScale(d)})
 
 
