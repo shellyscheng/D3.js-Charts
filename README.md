@@ -1,3 +1,14 @@
-# d3 Exercise
+# D3.js Charts
 
-Hi, this is some basic graphics that I made through d3.js
+Hi, I am currently learning d3. Here are some graphics that I made through d3.js. Selected graphics are visible at [https://shiyingcheng.github.io/D3.js-Charts/]("https://shiyingcheng.github.io/D3.js-Charts/")
+
+I will keep updated here on a regularl basis.
+
+
+## Line & Area Charts
+
+## Pie and Radial Charts
+
+## Samll Multiple Charts
+
+## Interactives
