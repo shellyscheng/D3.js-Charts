@@ -45,10 +45,19 @@
         line-height: 1;
         font-weight: bold;
         padding: 12px;
-        background: rgba(0, 0, 0, 0.8);
+        background: #4cc1fc;
         color: #fff;
         border-radius: 2px;
         pointer-events: none;
+      }
+
+      /* 
+        go find a span inside of a thing
+        with the class of d3-tip 
+      */
+      .d3-tip span {
+        color: white;
+        font-weight: normal;
       }
 
       /* Creates a small triangle extender for the tooltip */
@@ -58,7 +67,7 @@
         font-size: 10px;
         width: 100%;
         line-height: 1;
-        color: rgba(0, 0, 0, 0.8);
+        color: #4cc1fc;
         position: absolute;
         pointer-events: none;
       }
@@ -114,10 +123,16 @@
   <div class="container">
 
     <h1>D3.js Charts and Interactive Graphics</h1>
-
     <h5> I am currently learning d3. Here are some simple D3 graphics I made on a weekly basis :D </h5>
 
-    <h3>Chart 1: Sorting and rebinding</h3>
+    
+    <h3>Chart 1: Apple Stock Market Interactive Chart</h3>
+    <p>When you hover over a point, a tooltip will show its date and price.</p>
+    <p>Data from <code>AAPL.csv</code></p>
+    <div id="chart-10"></div>
+
+
+    <h3>Chart 2: Sorting and rebinding</h3>
   
     <p><strong>Sort the data:</strong>
     <button id="freq-sorter">By Frequency</button>
@@ -126,7 +141,8 @@
 
     <div id="chart-7"></div>
 
-    <h3>Chart 2: Changing scales and axes</h3>
+    
+   <!--  <h3>Chart 2: Changing scales and axes</h3>
 
     <p>Or maybe the data is fine, it's just the axes that should change.</p>
 
@@ -135,8 +151,9 @@
     <button id="out-of-max-freq">0-max frequency</button>
     </p>
 
-    <div id="chart-8"></div>
+    <div id="chart-8"></div> -->
 
+    
     <h2>Chart 3: Interactive point/bubble maps</h3>
 
     <p>Putting circles on a map.</p>
@@ -180,6 +197,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.2/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 
+    <script src="d3-tip.js"></script>
+
 
 
     <!-- Now we include our actual visualization -->
@@ -192,6 +211,7 @@
     <script src="sorting-rebinding.js"></script>
     <script src="scales.js"></script>
     <script src="radial.js"></script>
+    <script src="apple-stock.js"></script>
     
 </div>
 </html>
