@@ -11,4 +11,4 @@ I will keep updated here on a regularl basis.
 
 ### Samll Multiple Charts
 
-### Interactives
+### Interactive Charts
