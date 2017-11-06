@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <style>
+      svg { 
+        /*background: #f9f9f9;*/
+        display: block;
+        margin: 0 auto;
+      }
+
+      h1 { margin-bottom: 2rem; }
+
+      body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        -webkit-print-color-adjust: exact;
+      }
+
+      h3 { margin-top: 3rem; }
+
+      .container {
+        max-width: 46rem;
+      }
+
+      #chart2 svg g {
+        fill: red;
+      }
+
+      .d3-tip {
+        line-height: 1;
+        font-weight: bold;
+        padding: 12px;
+        background: #4cc1fc;
+        color: #fff;
+        border-radius: 2px;
+        pointer-events: none;
+      }
+
+      /* 
+        go find a span inside of a thing
+        with the class of d3-tip 
+      */
+      .d3-tip span {
+        color: white;
+        font-weight: normal;
+      }
+
+      /* Creates a small triangle extender for the tooltip */
+      .d3-tip:after {
+        box-sizing: border-box;
+        display: inline;
+        font-size: 10px;
+        width: 100%;
+        line-height: 1;
+        color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        pointer-events: none;
+      }
+
+      /* Northward tooltips */
+      .d3-tip.n:after {
+        content: "\25BC";
+        margin: -1px 0 0 0;
+        top: 100%;
+        left: 0;
+        text-align: center;
+      }
+
+      /* Eastward tooltips */
+      .d3-tip.e:after {
+        content: "\25C0";
+        margin: -4px 0 0 0;
+        top: 50%;
+        left: -8px;
+      }
+
+      /* Southward tooltips */
+      .d3-tip.s:after {
+        content: "\25B2";
+        margin: 0 0 1px 0;
+        top: -8px;
+        left: 0;
+        text-align: center;
+      }
+
+      /* Westward tooltips */
+      .d3-tip.w:after {
+        content: "\25B6";
+        margin: -4px 0 0 -1px;
+        top: 50%;
+        left: 100%;
+      }
+
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <h1>Interaction</h1>
+
+    <h3>Chart 1: Hovering over dots</h3>
+    <p>We have a nice line graph about how much Apple's stock price was over time.</p>
+    <p>When I hover over a point, I want a tooltip to come up showing the date and <code>AAPL</code>'s close price on that date. I want it to look like <a href="aapl-tooltip.png">this</a>.</p>
+    <p><strong>BONUS:</strong> Make the dots get a little larger when you hover over them.</p>
+    <div id="chart-1"></div>
+
+    <h3>Chart 2: Small multiples</h3>
+    <p>Let's talk about <a href="https://www.nytimes.com/interactive/2017/09/02/upshot/fentanyl-drug-overdose-deaths.html">drug overdose deaths</a>.</p>
+    <p>I thought it would be nice that when you hovered over a state if the name/circle/line for that state lit up and moved in front of everthing else. I want it to look like <a href="state-hover.png">this</a>.</p>
+    <p><strong>BONUS:</strong> Make it happen when hovering over the lines and circles, too.</p>
+    <div id="chart-2"></div>
+
+    <!-- This is D3, our graphing library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+
+     <script src="d3-tip.js"></script>
+
+    <!-- Now we include our actual visualization -->
+    <script src="12-chart-1.js"></script>
+    <script src="12-chart-2.js"></script>
+</div>
+</html>
+
+
+
