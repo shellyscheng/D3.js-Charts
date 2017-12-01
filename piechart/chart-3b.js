@@ -11,7 +11,7 @@
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  var pie = d3.pie().value(1/12)
+  var pie = d3.pie().value(1/12).sort(null)
 
   var outerLength = d3.scaleLinear().domain([0, 120]).range([30, 100])
 
