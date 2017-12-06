@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <style>
+      svg, canvas { 
+        background: #f9f9f9;
+        display: block;
+        margin: 0 auto;
+      }
+
+      h1 { margin-bottom: 2rem; }
+
+      body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      h3 { 
+        margin-top: 3rem; 
+        margin-bottom: 1rem;
+      }
+
+      .container {
+        max-width: 46rem;
+      }
+
+      svg, canvas {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+</head>
+<body>
+<div class="container">
+  <h1>Canvas</h1>
+
+  <h2>Drawing with Canvas</h2>
+
+  <p>Helpful reading list:</p>
+  <ul>
+    <li><a target="_new" href="https://medium.freecodecamp.org/d3-and-canvas-in-3-steps-8505c8b27444">https://medium.freecodecamp.org/d3-and-canvas-in-3-steps-8505c8b27444</a></li>
+    <li><a target="_new" href="https://www.visualcinnamon.com/2015/11/learnings-from-a-d3-js-addict-on-starting-with-canvas.html">https://www.visualcinnamon.com/2015/11/learnings-from-a-d3-js-addict-on-starting-with-canvas.html</a></li>
+    <li><a target="_new" href="https://bocoup.com/blog/smoothly-animate-thousands-of-points-with-html5-canvas-and-d3">https://bocoup.com/blog/smoothly-animate-thousands-of-points-with-html5-canvas-and-d3</a></li>
+  </ul>
+
+  <h3>0. Drawing in a <code>canvas</code> without data</h3>
+  <p>Reference materials available at <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D" target="_new">here</a>.</p>
+  <div id="chart-0"></div>
+
+  <h3>1. Drawing in a <code>canvas</code> with fake data</h3>
+  <p>Reference materials available at <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D" target="_new">here</a>.</p>
+
+  <div id="chart-1"></div>
+
+  <h3>2. Using <a href="https://github.com/d3/d3-timer" target="_new"><code>d3.timer</code></a></h3>
+  <p>You can use <code>d3.timer</code> to make things happen again and again and again and again.</p>
+
+  <div id="chart-2"></div>
+  
+  <h3>3. Using <a href="https://github.com/d3/d3-ease" target="_new"><code>d3-ease</code></a> and interpolation</h3>
+  <p>Easing functions are used to smoothly move from one value to another.</p>
+  <p><button id="ease-start">Run easing</button> <button id="ease-stop">Stop easing</button></p>
+  <div id="chart-3"></div>
+
+  <h3>4. Animating <code>canvas</code> with <code>d3.timer</code> + easing functions</h3>
+  <p>You can't use <code>transition()</code> with <code>canvas</code>, so this is the next best thing. I doubt we'll get here today.</p>
+  <div id="chart-4"></div>
+
+  <!-- This is D3, our graphing library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+
+  <!-- Now we include our actual visualization -->
+  <script src="00-basic-canvas.js"></script>
+  <script src="01-fake.js"></script>
+  <script src="02-timer.js"></script>
+  <script src="03-ease.js"></script>
+  <script src="03-ease-v2.js"></script>
+  <script src="04-transitions.js"></script>
+</div>
+</body>
+</html>
