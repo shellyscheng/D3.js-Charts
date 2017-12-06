@@ -61,7 +61,7 @@
     d3.timer(function() {
       // go through every datapoints and increase index
       // update the color
-
+      
       datapoints.forEach(function(d) {
         d.index = d.index + columnCount
         d.color = colorScale(d.index)
