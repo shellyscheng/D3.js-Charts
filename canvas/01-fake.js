@@ -20,7 +20,7 @@
     .await(ready)
 
   function ready(error) {
-    columnCount = 200
+    columnCount = 100
     var datapoints = d3.range(5000).map(function(i) {
       return { 
         // build into a list of rows and columns
@@ -40,6 +40,23 @@
     colorScale.domain([0, maxIndex])
 
     console.log(datapoints)
+
+    // Calculsate parts
+     datapoints.forEach(function(d) {
+      d.x = xPositionScale(d.column)
+      d.y = yPositionScale(d.row)
+      d.color = colorScale(d.index)
+    })
+
+    // Draw things
+
+    datapoints.forEach(function(d) {
+      context.beginPath()
+      context.fillStyle = d.color
+      context.arc(d.x, d.y, 2, 0, Math.PI * 2)
+      context.fill()
+      context.closePath()
+    })
 
   };
 
