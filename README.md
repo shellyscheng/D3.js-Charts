@@ -12,3 +12,5 @@ I will keep updated here on a regularl basis.
 ### 3. Samll Multiple Charts
 
 ### 4. Interactive Charts
+
+### 5. Canvas
