@@ -18,12 +18,28 @@
   function ready(error) {
     // arc(x, y, radius, startAngle, endAngle, counterclockwise)
 
+    context.arc(20, 20, 10, 0, Math.PI * 2)
+    context.fill() //without begin and close path, fill will all the things drawing before
+
+    context.beginPath()
+    context.fillStyle = "green"
+    context.arc(80, 100, 10, 0, Math.PI * 2)
+    context.fill()
+    context.closePath()
+
     // context.fillStyle = "pink"
     // moveTo(x, y)
     // lineTo(y, y)
+    context.beginPath()
+    context.moveTo(10,300)
+    context.lineTo(500, 250)
+    context.stroke()
+    context.fill()
+    context.closePath()
 
 
     // fillRect(x, y, width, height)
+    context.fillStyle = "coral"
     context.fillRect(300, 100, 300, 100)
 
     context.fillStyle = "pink" //everything drawing afterwards will be pink
