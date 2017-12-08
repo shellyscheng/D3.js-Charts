@@ -95,12 +95,35 @@
 
     d3.select("#random").on('click', function() {
       datapoints.forEach(function(d) {
-        d.x = Math.random() * width
-        d.y = Math.random() * height
+        // source location
+        d.sx = d.x
+        d.sy = d.y
+        // target x and y destination
+        d.tx = Math.random() * width
+        d.ty = Math.random() * height
       })
 
-      draw()
+      var duration = 2000
+
+      var timer = d3.timer(function(elapsed) {
+        // ensure max value of 1 is
+        var t = Math.min(1, elapsed / duration)
+        console.log(t)
+
+        datapoints.forEach(function(d) {
+          d.x = d.sx * (1 - t) + d.tx * t
+          d.y = d.sy * (1 - t) + d.ty * t
+        })
+
+        draw()
+
+        if(t >= 1) {
+          timer.stop()
+        }
+      })
+
     })
+
 
     d3.select("#organized").on('click', function() {
       datapoints.forEach(function(d, i) {
