@@ -17,7 +17,7 @@
   var colorScale = d3.scaleOrdinal().range(['#7fc97f','#beaed4','#fdc086','#386cb0','#f0027f','#bf5b17','#666666'])
 
   d3.queue()
-    .defer(d3.csv, "countries.csv")
+    .defer(d3.csv, "data/countries.csv")
     .await(ready)
 
   function ready(error, countries) {
@@ -102,31 +102,44 @@
         d.tx = Math.random() * width
         d.ty = Math.random() * height
       })
-      
+
       update()
 
     })
 
-
+    // put them into rows and columns
     d3.select("#organized").on('click', function() {
       datapoints.forEach(function(d, i) {
-        d.x = i * 5 % width
-        d.y = Math.floor(i * 5 / width) * 5
+        
+        d.sx = d.x
+        d.sy = d.y
+
+        d.tx = i * 5 % width
+        d.ty = Math.floor(i * 5 / width) * 5
       })
+
+      update()
     })
 
     d3.select("#bars").on('click', function() {
       d3.nest()
-        .key(function(d) {
-          return d.continent
-        })
+        .key(function(d) { return d.continent })
         .entries(datapoints)
         .forEach(function(d) {
+          console.log(d)
+
+          var offset = yPositionScale(d.key)
+          console.log(offset)
+
           d.values.forEach(function(d, i) {
-            d.x = i * 5 % width
-            d.y = Math.floor(i * 5 / width) * 5
+            d.sx = d.x
+            d.sy = d.y
+
+            d.tx = i * 5 % width
+            d.ty = offset + Math.floor(i * 5 / width) * 5
           })
         })
+      update()
     })
 
     draw()
