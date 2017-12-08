@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <style>
+      svg, canvas { 
+        background: #f9f9f9;
+        display: block;
+        margin: 0 auto;
+      }
+
+      h1 { margin-bottom: 2rem; }
+
+      body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      h3 { 
+        margin-top: 3rem; 
+        margin-bottom: 1rem;
+      }
+
+      .container {
+        max-width: 46rem;
+      }
+
+      svg, canvas {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+</head>
+<body>
+<div class="container">
+  <h1>Canvas</h1>
+
+  <h2>Drawing with Canvas</h2>
+
+  <p>Helpful reading list:</p>
+  <ul>
+    <li><a target="_new" href="https://medium.freecodecamp.org/d3-and-canvas-in-3-steps-8505c8b27444">https://medium.freecodecamp.org/d3-and-canvas-in-3-steps-8505c8b27444</a></li>
+    <li><a target="_new" href="https://www.visualcinnamon.com/2015/11/learnings-from-a-d3-js-addict-on-starting-with-canvas.html">https://www.visualcinnamon.com/2015/11/learnings-from-a-d3-js-addict-on-starting-with-canvas.html</a></li>
+    <li><a target="_new" href="https://bocoup.com/blog/smoothly-animate-thousands-of-points-with-html5-canvas-and-d3">https://bocoup.com/blog/smoothly-animate-thousands-of-points-with-html5-canvas-and-d3</a></li>
+  </ul>
+
+  <h3>1. Data created on the fly</h3>
+  <p>
+    <button id="random">Scatter</button>
+    <button id="organized">Organized</button>
+    <button id="bars">Bars</button>
+  </p>
+
+  <div id="chart-1"></div>
+
+  <h3>2. Counties</h3>
+  <p>
+    <button id="random-map">Random</button>
+    <button id="use-coordinates">Use coordinates</button>
+  </p>
+  <div id="chart-2"></div>
+
+  <!-- This is D3, our graphing library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+  
+  <!-- Now we include our actual visualization -->
+  <script src="01-fake-data.js"></script>
+  <script src="02-world.js"></script>
+</div>
+</body>
+</html>
