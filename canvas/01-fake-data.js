@@ -73,25 +73,25 @@
       })
     }
 
-    // function update() {
-    //   var duration = 1500
-    //   var ease = d3.easeCubic
+    function update() {
+      var duration = 1500
+      var ease = d3.easeCubic
 
-    //   var timer = d3.timer(function(elapsed) {
-    //     var t = ease(elapsed / duration)
+      var timer = d3.timer(function(elapsed) {
+        var t = ease(elapsed / duration)
 
-    //     datapoints.forEach(function(d) {
-    //       d.x = d.sx * (1 - t) + d.tx * t
-    //       d.y = d.sy * (1 - t) + d.ty * t
-    //     })
+        datapoints.forEach(function(d) {
+          d.x = d.sx * (1 - t) + d.tx * t
+          d.y = d.sy * (1 - t) + d.ty * t
+        })
 
-    //     if(elapsed > duration) {
-    //       timer.stop()
-    //     }
+        if(elapsed > duration) {
+          timer.stop()
+        }
 
-    //     draw()
-    //   })
-    // }
+        draw()
+      })
+    }
 
     d3.select("#random").on('click', function() {
       datapoints.forEach(function(d) {
@@ -102,25 +102,8 @@
         d.tx = Math.random() * width
         d.ty = Math.random() * height
       })
-
-      var duration = 2000
-
-      var timer = d3.timer(function(elapsed) {
-        // ensure max value of 1 is
-        var t = Math.min(1, elapsed / duration)
-        console.log(t)
-
-        datapoints.forEach(function(d) {
-          d.x = d.sx * (1 - t) + d.tx * t
-          d.y = d.sy * (1 - t) + d.ty * t
-        })
-
-        draw()
-
-        if(t >= 1) {
-          timer.stop()
-        }
-      })
+      
+      update()
 
     })
 
