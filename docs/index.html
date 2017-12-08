@@ -134,7 +134,7 @@
     <h6> I am also working on some longer projects on the side, including gun violence and health care. I will publish them as soon as I finish them. </h6>
     <p> </p>
 
-    <h6>I am currently looking for 2018 summer internship. You can find my code on <a href="https://github.com/shiyingcheng/D3.js-Charts">my github</a>. You can also visit <a href="https://www.shiying-cheng.com/">my website</a> for some other projects. Feel free to <a href="mailto:shiying.s.c@gmail.com" target="_top">email me</a> if you have any questions.</h6> 
+    <h6>I am currently looking for 2018 summer internship. You can find more of my code on <a href="https://github.com/shiyingcheng/D3.js-Charts">my github</a>. You can also visit <a href="https://www.shiying-cheng.com/">my website</a> for some other projects. Feel free to <a href="mailto:shiying.s.c@gmail.com" target="_top">email me</a> if you have any questions.</h6> 
 
     
     <h3>Chart 1: Apple Stock Market Interactive Chart</h3>
@@ -145,17 +145,6 @@
     <h3>Chart 2: Drug Overdose Deaths</h3>
     <p> Reproduce this graph from <a href="https://www.nytimes.com/interactive/2017/09/02/upshot/fentanyl-drug-overdose-deaths.html"> Upshot</a>.</p>
     <div id="chart-11"></div>
-
-
-
-    <h3>Chart 3: Sorting and rebinding</h3>
-  
-    <p><strong>Sort the data:</strong>
-    <button id="freq-sorter">By Frequency</button>
-    <button id="letter-sorter">By Letter</button>
-    </p>
-
-    <div id="chart-7"></div>
 
     
    <!--  <h3>Chart 2: Changing scales and axes</h3>
@@ -170,28 +159,48 @@
     <div id="chart-8"></div> -->
 
     
-    <h3>Chart 4: Interactive point/bubble maps</h3>
+    <h3>Chart 3: Interactive points on Canvas </h3>
 
     <p>Putting circles on a map.</p>
-    <p><button id="make-a-chart">Make a chart</button>
-    <button id="make-a-map">Make a map</button></p>
+    <p>
+    <button id="random">Scatter</button>
+    <button id="organized">Organized</button>
+    <button id="bars">Bars</button>
+    </p>
 
-    <div id="chart-5"></div>
+    <div id="chart-13"></div>
 
     <p> </p>
     <p> </p>
 
+    <h3>Chart 4: Counties</h3>
+    <p>
+    <button id="random-map">Random</button>
+    <button id="use-coordinates">Use coordinates</button>
+    </p>
+    <div id="chart-14"></div>
 
-    <h3>Chart 5: Small multiples </h3>
+
+    <h3>Chart 5: Sorting and rebinding</h3>
+  
+    <p><strong>Sort the data:</strong>
+    <button id="freq-sorter">By Frequency</button>
+    <button id="letter-sorter">By Letter</button>
+    </p>
+
+    <div id="chart-7"></div>
+
+
+    <h3>Chart 6: Small multiples </h3>
     <p>Reproducing a graphic from <a href="https://www.nytimes.com/2014/04/23/upshot/the-american-middle-class-is-no-longer-the-worlds-richest.html?rref=upshot">this Upshot article</a>.</p>Data is from <code>middle-class-income.csv</code> and <code>middle-class-income-usa.csv</code></p>
     <div id="chart-4"></div>
 
 
-    <h3>Chart 6: Small multiples</h3>
+    <h3>Chart 7: Small multiples</h3>
     <p>Recreate <a href="https://www.reddit.com/r/dataisbeautiful/comments/3gplje/usa_vs_japan_agespecific_fertility_rates_19472010/">this</a> and <a href="http://www.randalolson.com/2015/08/23/small-multiples-vs-animated-gifs-for-showing-changes-in-fertility-rates-over-time/">this</a> using D3 and small multiples. Data is from <code>fertility.csv</code></h3>
     <div id="chart-3"></div>
 
-    <h3>Chart 7: Barbell Plot -GDP Change </h3>
+    <h3>Chart 8: Barbell Plot -GDP Change </h3>
     <p>Recreate <a href="https://www.reddit.com/r/dataisbeautiful/comments/3gplje/usa_vs_japan_agespecific_fertility_rates_19472010/">this</a> and <a href="http://www.randalolson.com/2015/08/23/small-multiples-vs-animated-gifs-for-showing-changes-in-fertility-rates-over-time/">this</a> using D3 and small multiples. Data is from <code>fertility.csv</code></h3>
     <div id="chart-6"></div>
 
@@ -199,15 +208,15 @@
     <p>  </p>
 
 
-    <h3>Chart 8: Pie chart, small multiples</h3>
+    <h3>Chart 9: Pie chart, small multiples</h3>
     <p>Dataset is <code>data/time-breakdown-all.csv</code></p>
     <div id="chart-2"></div>
 
-    <h3>Chart 9: Radial Chart</h3>
+    <h3>Chart 10: Radial Chart</h3>
     <p>NYC's annual avearge temparture. Dataset is <code>data/all-temps.csv</code></p>
     <div id="chart-9"></div>
 
-    <h3>Chart 10: Rose_Diagram </h3>
+    <h3>Chart 11: Rose_Diagram </h3>
     <p><code>data/time-binned.csv</code></h3>
     <div id="chart-12"></div>
 
@@ -234,6 +243,10 @@
     <script src="apple-stock.js"></script>
     <script src="overdoes.js"></script>
     <script src="rose_diagram.js"></script>
+    <script src="dot_trasition.js"></script>
+    <script src="mapworld.js"></script>
+    
+    
     
 </div>
 </html>
