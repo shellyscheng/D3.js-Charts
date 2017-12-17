@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Interactivity</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <style>
+      svg { 
+        background: #f9f9f9;
+        display: block;
+        margin: 0 auto;
+      }
+
+      h1 { margin-bottom: 2rem; }
+
+      body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      h3 { 
+        margin-top: 3rem; 
+        margin-bottom: 1rem;
+      }
+
+      .container {
+        max-width: 46rem;
+      }
+
+      img.block {
+        display: block;
+        border: solid #333 1p;
+        margin: 0 auto;
+      }
+
+      svg {
+        margin-bottom: 15px;
+      }
+
+      .d3-tip {
+        line-height: 1;
+        font-weight: bold;
+        padding: 12px;
+        background: rgba(100, 0, 100, 0.8);
+        color: #fff;
+        border-radius: 2px;
+        pointer-events: none;
+      }
+
+      /* 
+        go find a span inside of a thing
+        with the class of d3-tip 
+      */
+      .d3-tip span {
+        color: coral;
+      }
+
+      /* Creates a small triangle extender for the tooltip */
+      .d3-tip:after {
+        box-sizing: border-box;
+        display: inline;
+        font-size: 10px;
+        width: 100%;
+        line-height: 1;
+        color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        pointer-events: none;
+      }
+
+      /* Northward tooltips */
+      .d3-tip.n:after {
+        content: "\25BC";
+        margin: -1px 0 0 0;
+        top: 100%;
+        left: 0;
+        text-align: center;
+      }
+
+      /* Eastward tooltips */
+      .d3-tip.e:after {
+        content: "\25C0";
+        margin: -4px 0 0 0;
+        top: 50%;
+        left: -8px;
+      }
+
+      /* Southward tooltips */
+      .d3-tip.s:after {
+        content: "\25B2";
+        margin: 0 0 1px 0;
+        top: -8px;
+        left: 0;
+        text-align: center;
+      }
+
+      /* Westward tooltips */
+      .d3-tip.w:after {
+        content: "\25B6";
+        margin: -4px 0 0 -1px;
+        top: 50%;
+        left: 100%;
+      }
+
+      #chart-3 .bar,
+      #chart-4 .bar  {
+        fill: lightblue;
+      }
+
+      #chart-3 .bar:hover,
+      #chart-4 .bar:hover {
+        fill: steelblue;
+      }
+
+      .oceania-select {
+        background: yellow;
+        padding: 3px 5px;
+        cursor: pointer;
+        color: white;
+      }
+
+      .asia-select {
+        background: yellow;
+        padding: 3px 5px;
+        cursor: pointer;
+        color: white;
+      }
+
+      .sa-select {
+        background: yellow;
+        padding: 3px 5px;
+        cursor: pointer;
+        color: white;
+      }
+    </style>
+  </head>
+</head>
+<body>
+<div class="container">
+  <h1>Interactivity</h1>
+
+  <h3>1. Listening for events grabbing an element</h3>
+
+  <div id="chart-1"></div>
+
+  <h3>2. Using classes to find and select elements.</h3>
+  <p> 
+    <span class="oceania-select">Oceania</span>, 
+    <span class="asia-select">Asia</span>
+     or only things from 
+     <span class="sa-select">South America</span>.</p>
+
+  <div id="chart-2"></div>
+
+  <!-- This is D3, our graphing library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+
+  <script src="d3-tip.js"></script>
+
+  <!-- Now we include our actual visualization -->
+  <script src="01-listening.js"></script>
+  <script src="02-selecting.js"></script>
+</div>
+</body>
+</html>
