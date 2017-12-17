@@ -14,3 +14,6 @@ I will keep updated here on a regularl basis.
 ### 4. Interactive Charts
 
 ### 5. Canvas
+
+### 6. Forced Diagrams
+Bubble Charts and network Chart
