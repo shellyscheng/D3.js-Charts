@@ -2,6 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
     <style>
       svg { 
@@ -122,6 +126,15 @@
         fill: steelblue;
       }
 
+       /* line elements inside of something with class 'axis' */
+      #chart-16 .axis line {
+        stroke: #CCCCCC;
+      }
+
+      #chart-16 .domain {
+        display: none;
+      }
+
      
     </style>
   </head>
@@ -129,12 +142,12 @@
   <div class="container">
 
     <h1>Static and Interactive Graphics (D3.js)</h1>
-    <h6>Hi, this is Shiying Cheng. Nice to meet you! I am currently learning d3.js. Here are some simple D3 graphics I made on a weekly basis :) </h6>
+    <h6>Hi, this is Shiying Cheng. Nice to meet you! I am currently learning d3.js. Here are selected D3 graphics I made on a weekly basis. To view more, click <a href="https://github.com/shiyingcheng/D3.js-Charts">here</a></h6>
 
     <h6> I am also working on some <a href="https://https://www.shiying-cheng.com/visualization--mapping.html/">longer projects</a> on the side, including gun violence and health care. I will publish them as soon as I finish them. </h6>
     <p> </p>
 
-    <h6>I am currently looking for 2018 summer internship. You can find more of my code on <a href="https://github.com/shiyingcheng/D3.js-Charts">my github</a>. You can also visit <a href="https://www.shiying-cheng.com/">my website</a> for some other projects. Feel free to <a href="mailto:shiying.s.c@gmail.com" target="_top">email me</a> if you have any questions.</h6> 
+    <h6>I am currently looking for 2018 summer internship. You can find more of my code on <a href="https://github.com/shiyingcheng?tab=repositories">my github</a>. You can also visit <a href="https://www.shiying-cheng.com/">my website</a> for some other projects. Feel free to <a href="mailto:shiying.s.c@gmail.com" target="_top">email me</a> if you have any questions.</h6> 
 
     
     <h3>Chart 1: Apple Stock Market Interactive Chart</h3>
@@ -210,20 +223,25 @@
     <div id="chart-15"></div>
 
 
-    <h3>Chart 9: Pie chart, small multiples</h3>
+    <h3>Chart 9: Body Mass Index Chart(BMI)</h3>
+    <p>Reproduce <a href="https://www.nytimes.com/interactive/projects/cp/summer-of-science-2015/latest/how-often-is-bmi-misleading">this piece from the NYT</a>:</p>
+    <div id="chart-16"></div>
+
+
+    <h3>Chart 10: Pie chart, small multiples</h3>
     <p>Dataset is <code>data/time-breakdown-all.csv</code></p>
     <div id="chart-2"></div>
 
-    <h3>Chart 10: Radial Chart</h3>
+    <h3>Chart 11: Radial Chart</h3>
     <p>NYC's annual avearge temparture. Dataset is <code>data/all-temps.csv</code></p>
     <div id="chart-9"></div>
 
-    <h3>Chart 11: Rose_Diagram </h3>
+    <h3>Chart 12: Rose_Diagram </h3>
     <p><code>data/time-binned.csv</code></h3>
     <div id="chart-12"></div>
 
 
-    <h3>Chart 12: Barbell Plot -GDP Change </h3>
+    <h3>Chart 13: Barbell Plot -GDP Change </h3>
     <p>Recreate <a href="https://www.reddit.com/r/dataisbeautiful/comments/3gplje/usa_vs_japan_agespecific_fertility_rates_19472010/">this</a> and <a href="http://www.randalolson.com/2015/08/23/small-multiples-vs-animated-gifs-for-showing-changes-in-fertility-rates-over-time/">this</a> using D3 and small multiples. Data is from <code>fertility.csv</code></h3>
     <div id="chart-6"></div>
 
@@ -252,7 +270,8 @@
     <script src="rose_diagram.js"></script>
     <script src="dot_trasition.js"></script>
     <script src="mapworld.js"></script>
-     <script src="circle_chart.js"></script>
+    <script src="circle_chart.js"></script>
+    <script src="bmi.js"></script>
     
     
     
