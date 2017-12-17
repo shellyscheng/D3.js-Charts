@@ -1,0 +1,340 @@
+{
+  "nodes": [
+    {
+      "student": "Steely Dan",
+      "label": "Steely Dan",
+      "id": "Steely Dan"
+    },
+    {
+      "student": "Beyonce",
+      "label": "Beyonce",
+      "id": "Beyonce"
+    },
+    {
+      "student": "Madonna",
+      "label": "Madonna",
+      "id": "Madonna"
+    },
+    {
+      "student": "Adam Levine",
+      "label": "Adam Levine",
+      "id": "Adam Levine"
+    },
+    {
+      "student": "Hall and Oates",
+      "label": "Hall and Oates",
+      "id": "Hall and Oates"
+    },
+    {
+      "student": "Nicki Minaj",
+      "label": "Nicki Minaj",
+      "id": "Nicki Minaj"
+    },
+    {
+      "student": "Drake",
+      "label": "Drake",
+      "id": "Drake"
+    },
+    {
+      "student": "Justin Bieber",
+      "label": "Justin Bieber",
+      "id": "Justin Bieber"
+    },
+    {
+      "student": "Kesha",
+      "label": "Kesha",
+      "id": "Kesha"
+    },
+    {
+      "student": "The Eagles",
+      "label": "The Eagles",
+      "id": "The Eagles"
+    },
+    {
+      "student": "The Cars",
+      "label": "The Cars",
+      "id": "The Cars"
+    },
+    {
+      "student": "Pat Benatar",
+      "label": "Pat Benatar",
+      "id": "Pat Benatar"
+    },
+    {
+      "student": "Lady Gaga",
+      "label": "Lady Gaga",
+      "id": "Lady Gaga"
+    },
+    {
+      "student": "Tina Turner",
+      "label": "Tina Turner",
+      "id": "Tina Turner"
+    },
+    {
+      "student": "Fetty Wap",
+      "label": "Fetty Wap",
+      "id": "Fetty Wap"
+    }
+  ],
+  "links": [
+    {
+      "id": 0,
+      "source": "Madonna",
+      "target": "Steely Dan",
+      "weight": 2,
+      "relationship": "default"
+    },
+    {
+      "id": 1,
+      "source": "Adam Levine",
+      "target": "Beyonce",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 2,
+      "source": "Hall and Oates",
+      "target": "Steely Dan",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 3,
+      "source": "Hall and Oates",
+      "target": "Madonna",
+      "weight": 3,
+      "relationship": "default"
+    },
+    {
+      "id": 4,
+      "source": "Nicki Minaj",
+      "target": "Beyonce",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 5,
+      "source": "Nicki Minaj",
+      "target": "Adam Levine",
+      "weight": 3,
+      "relationship": "default"
+    },
+    {
+      "id": 6,
+      "source": "Justin Bieber",
+      "target": "Beyonce",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 7,
+      "source": "Justin Bieber",
+      "target": "Adam Levine",
+      "weight": 3,
+      "relationship": "default"
+    },
+    {
+      "id": 8,
+      "source": "Justin Bieber",
+      "target": "Nicki Minaj",
+      "weight": 3,
+      "relationship": "default"
+    },
+    {
+      "id": 9,
+      "source": "Kesha",
+      "target": "Adam Levine",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 10,
+      "source": "Kesha",
+      "target": "Nicki Minaj",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 11,
+      "source": "Kesha",
+      "target": "Justin Bieber",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 12,
+      "source": "The Eagles",
+      "target": "Steely Dan",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 13,
+      "source": "The Eagles",
+      "target": "Madonna",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 14,
+      "source": "The Cars",
+      "target": "Steely Dan",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 15,
+      "source": "The Cars",
+      "target": "Madonna",
+      "weight": 2,
+      "relationship": "default"
+    },
+    {
+      "id": 16,
+      "source": "The Cars",
+      "target": "Hall and Oates",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 17,
+      "source": "The Cars",
+      "target": "The Eagles",
+      "weight": 2,
+      "relationship": "default"
+    },
+    {
+      "id": 18,
+      "source": "Pat Benatar",
+      "target": "Steely Dan",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 19,
+      "source": "Pat Benatar",
+      "target": "Madonna",
+      "weight": 2,
+      "relationship": "default"
+    },
+    {
+      "id": 20,
+      "source": "Pat Benatar",
+      "target": "Hall and Oates",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 21,
+      "source": "Pat Benatar",
+      "target": "The Eagles",
+      "weight": 2,
+      "relationship": "default"
+    },
+    {
+      "id": 22,
+      "source": "Pat Benatar",
+      "target": "The Cars",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 23,
+      "source": "Lady Gaga",
+      "target": "Madonna",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 24,
+      "source": "Lady Gaga",
+      "target": "Hall and Oates",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 25,
+      "source": "Lady Gaga",
+      "target": "The Cars",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 26,
+      "source": "Tina Turner",
+      "target": "Steely Dan",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 27,
+      "source": "Tina Turner",
+      "target": "Madonna",
+      "weight": 3,
+      "relationship": "default"
+    },
+    {
+      "id": 28,
+      "source": "Tina Turner",
+      "target": "Hall and Oates",
+      "weight": 3,
+      "relationship": "default"
+    },
+    {
+      "id": 29,
+      "source": "Tina Turner",
+      "target": "The Cars",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 30,
+      "source": "Tina Turner",
+      "target": "Pat Benatar",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 31,
+      "source": "Tina Turner",
+      "target": "Lady Gaga",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 32,
+      "source": "Fetty Wap",
+      "target": "Beyonce",
+      "weight": 1,
+      "relationship": "default"
+    },
+    {
+      "id": 33,
+      "source": "Fetty Wap",
+      "target": "Adam Levine",
+      "weight": 3,
+      "relationship": "default"
+    },
+    {
+      "id": 34,
+      "source": "Fetty Wap",
+      "target": "Nicki Minaj",
+      "weight": 3,
+      "relationship": "default"
+    },
+    {
+      "id": 35,
+      "source": "Fetty Wap",
+      "target": "Justin Bieber",
+      "weight": 3,
+      "relationship": "default"
+    },
+    {
+      "id": 36,
+      "source": "Fetty Wap",
+      "target": "Kesha",
+      "weight": 1,
+      "relationship": "default"
+    }
+  ]
+}
