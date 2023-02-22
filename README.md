@@ -1,6 +1,6 @@
 # D3.js Charts
 
-Hi, I am currently learning d3. Some of class and homework assingments are included here. Selected graphics in the /doc folder are visible at [https://shiyingcheng.github.io/D3.js-Charts/]("https://shiyingcheng.github.io/D3.js-Charts/")
+Hi, I am currently learning d3. Some of class and homework assignments are included here. Selected graphics in the /doc folder are visible at [https://shellyscheng.github.io/D3.js-Charts/]("https://shiyingcheng.github.io/D3.js-Charts/")
 
 Course taught by Jonathan Soma, Columbia Journalism School
 
